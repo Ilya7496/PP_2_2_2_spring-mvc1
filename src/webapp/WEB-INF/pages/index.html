@@ -1,15 +1,48 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
+    <title>List Employees</title>
     <meta charset="UTF-8">
-    <title></title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous" />
 </head>
+
 <body>
-<div>
-    <th:block th:each="msg : ${messages}">
-        <h1 th:text="${msg}"></h1>
-    </th:block>
+
+<div class="container">
+
+    <h3>List users</h3>
+
+    <hr/>
+    <a th:href="@{/get_user_form}" class="btn btn-primary"> + Add user</a>
+    <br/><br/>
+    <table class="table table-bordered table-striped">
+
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user: ${allUsers}">
+            <td th:text="${user.getName()}" />
+            <td th:text="${user.getEmail()}" />
+            <td th:text="${user.getPhone()}" />
+            <td>
+                <a th:href="@{/get_user/{id}(id=${user.getId()})}" class="btn btn-info">Update</a>
+                <a th:href="@{/delete_user/{id}(id=${user.getId()})}" class="btn btn-secondary">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
 </div>
+
+
 </body>
+
 </html>
