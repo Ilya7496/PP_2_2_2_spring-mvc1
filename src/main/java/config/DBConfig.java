@@ -1,5 +1,6 @@
 package config;
 
+import Service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
@@ -63,4 +64,5 @@ public class DBConfig {
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
         return transactionManager;
     }
+
 }
