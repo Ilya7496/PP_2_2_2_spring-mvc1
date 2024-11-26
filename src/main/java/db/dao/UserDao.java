@@ -1,11 +1,10 @@
-package Service;
+package db.dao;
 
-import model.User;
-import org.springframework.stereotype.Service;
+import db.model.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserDao {
     void addUser(User user);
 
     void updateUser(User user);

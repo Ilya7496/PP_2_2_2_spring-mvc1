@@ -1,10 +1,10 @@
-package dao;
+package db.service;
 
-import model.User;
+import db.model.User;
 
 import java.util.List;
 
-public interface UserDao {
+public interface UserService {
     void addUser(User user);
 
     void updateUser(User user);

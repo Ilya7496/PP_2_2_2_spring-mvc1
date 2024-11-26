@@ -1,4 +1,4 @@
-package config;
+package db.config;
 
 import Service.UserService;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +20,7 @@ import java.util.Properties;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScan("java")
+@ComponentScan("db")
 public class DBConfig {
 
     private Environment env;

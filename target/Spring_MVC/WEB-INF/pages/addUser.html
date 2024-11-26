@@ -17,8 +17,8 @@
 
     <form th:action="@{/add_user}" th:object="${user}" method="POST" accept-charset="UTF-8">
         <input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Enter Name" />
-        <input type="text" th:field="*{email}" class="form-control col-4 mb-4" placeholder="Enter email" />
-        <input type="text" th:field="*{phone}" class="form-control col-4 mb-4" placeholder="Enter number" />
+        <input type="text" th:field="*{email}" class="form-control col-8 mb-4" placeholder="Enter email" />
+        <input type="text" th:field="*{phone}" class="form-control col-6 mb-4" placeholder="Enter phone number" />
         <button type="submit" class="btn btn-primary col-2">Save</button>
     </form>
     <hr/>
