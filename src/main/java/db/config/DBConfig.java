@@ -1,6 +1,5 @@
 package db.config;
 
-import Service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
