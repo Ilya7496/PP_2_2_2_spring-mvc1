@@ -1,11 +1,10 @@
 package db.model;
 
 
-import javax.persistence.*;
-
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "User")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
