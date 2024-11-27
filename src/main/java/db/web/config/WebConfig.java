@@ -12,9 +12,9 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
-@Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "db.web")
+@ComponentScan(basePackages = "java")
+@Configuration
 public class WebConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
