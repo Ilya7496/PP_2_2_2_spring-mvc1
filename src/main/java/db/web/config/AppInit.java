@@ -4,7 +4,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
-import jakarta.servlet.*;
+
 
 
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {

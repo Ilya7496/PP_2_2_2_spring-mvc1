@@ -17,15 +17,15 @@
     <dependencies>
 
         <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>6.0.0</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>6.2.0</version>
+            <version>5.3.14</version>
         </dependency>
 
         <dependency>
@@ -40,13 +40,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>6.2.0</version>
+            <version>5.3.14</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>6.2.0</version>
+            <version>5.3.14</version>
         </dependency>
 
         <dependency>
@@ -64,7 +64,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>5.3.30</version>
+            <version>5.3.14</version>
         </dependency>
 
         <dependency>
@@ -98,9 +98,9 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>3.3.2</version>
                     <configuration>
-                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                        <warSourceDirectory>src/webapp</warSourceDirectory>
                         <warName>spring_mvc</warName>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
@@ -118,15 +118,6 @@
             </plugin>
         </plugins>
         <finalName>Spring_MVC</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/webapp</directory>
-                <targetPath>WEB-INF</targetPath>
-                <includes>
-                    <include>**/*.html</include>
-                </includes>
-            </resource>
-        </resources>
     </build>
 
 </project>
