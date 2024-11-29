@@ -1,6 +1,8 @@
 package db.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
+
 
 @Entity
 @Table(name = "User")
@@ -8,10 +10,19 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotBlank(message= "Поле не может быть пустым.")
+    @Pattern(regexp = "^[A-Za-z]+$", message = "Имя не может содержать цифры и символы.")
     @Column
     private String name;
+
+    @NotBlank(message = "Поле не может пустым.")
+    @Email(message = "Почта должна быть валидной.")
     @Column
     private String email;
+
+    @NotBlank(message = "Поле дожно содержать цифры")
+    @Pattern(regexp = "\\d{11}$", message = "Номер должен содержать 11 цифр.")
     @Column
     private String phone;
 

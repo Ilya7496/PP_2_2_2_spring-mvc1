@@ -13,7 +13,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @EnableWebMvc
-@ComponentScan(basePackages = "java")
+@ComponentScan(basePackages = "db")
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
